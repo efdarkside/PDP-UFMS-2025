@@ -251,8 +251,8 @@ function PanelCompetencias() {
               return (
                 <g>
                   <rect x={x} y={y} width={width} height={height} fill={treeColors[index % treeColors.length]} rx={4} opacity={0.85} />
-                  {width > 60 && height > 30 && <text x={x+width/2} y={y+height/2-6} textAnchor="middle" fill="#fff" fontSize={11} fontWeight={700}>{name}</text>}
-                  {width > 40 && height > 30 && <text x={x+width/2} y={y+height/2+10} textAnchor="middle" fill="rgba(255,255,255,0.7)" fontSize={10}>{size} cursos</text>}
+                  {width > 60 && height > 30 && <text x={x+width/2} y={y+height/2-6} textAnchor="middle" fill="#ffffff" style={{ fill: '#ffffff', pointerEvents: 'none' }} fontSize={11} fontWeight={700}>{name}</text>}
+                  {width > 40 && height > 30 && <text x={x+width/2} y={y+height/2+10} textAnchor="middle" fill="#f8fafc" style={{ fill: '#f8fafc', pointerEvents: 'none' }} fontSize={10}>{size} cursos</text>}
                 </g>
               );
             }}
