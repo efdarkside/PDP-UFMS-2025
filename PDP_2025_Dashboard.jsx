@@ -251,8 +251,9 @@ function PanelCompetencias() {
               return (
                 <g>
                   <rect x={x} y={y} width={width} height={height} fill={treeColors[index % treeColors.length]} rx={4} opacity={0.85} />
-                  {width > 60 && height > 30 && <text x={x+width/2} y={y+height/2-6} textAnchor="middle" fill="#ffffff" style={{ fill: '#ffffff', pointerEvents: 'none' }} fontSize={11} fontWeight={700}>{name}</text>}
-                  {width > 40 && height > 30 && <text x={x+width/2} y={y+height/2+10} textAnchor="middle" fill="#f8fafc" style={{ fill: '#f8fafc', pointerEvents: 'none' }} fontSize={10}>{size} cursos</text>}
+                  {/* Adicionado stroke="none" para a borda escura do gráfico não engolir o texto */}
+                  {width > 60 && height > 30 && <text x={x+width/2} y={y+height/2-6} textAnchor="middle" fill="#ffffff" stroke="none" style={{ pointerEvents: 'none' }} fontSize={11} fontWeight={700}>{name}</text>}
+                  {width > 40 && height > 30 && <text x={x+width/2} y={y+height/2+10} textAnchor="middle" fill="#f8fafc" stroke="none" style={{ pointerEvents: 'none' }} fontSize={10}>{size} cursos</text>}
                 </g>
               );
             }}
